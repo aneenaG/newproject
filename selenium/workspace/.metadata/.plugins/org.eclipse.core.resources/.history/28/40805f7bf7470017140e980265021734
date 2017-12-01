@@ -1,0 +1,29 @@
+package com.chrome.tests;
+import org.openqa.selenium.By;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class face {
+	public static void main(String[] args)
+	{
+		System.setProperty("webdriver.chrome.driver", "/Users/roshan/Downloads/chromedriver");
+		ChromeDriver driver=new ChromeDriver();
+		driver.get("http://www.facebook.com");
+		driver.findElement(By.xpath(".//*[@id='u_0_1']")).sendKeys("aneena");
+		driver.findElement(By.xpath(".//*[@id='u_0_g']")).click();
+		Select sel=new Select(driver.findElement(By.xpath("//*[@id='month']")));
+		sel.selectByIndex(1);
+		Select sel1=new Select(driver.findElement(By.xpath(".//*[@id='day']")));
+		sel1.selectByIndex(4);
+		Select sel2=new Select(driver.findElement(By.xpath(".//*[@id='year']")));
+		sel2.selectByIndex(5);
+		driver.findElement(By.xpath(".//*[@id='u_0_l']")).click();
+		driver.findElement(By.xpath(".//*[@id='reg_pages_msg']/a")).click();
+		driver.navigate().back();
+		//driver.quit();
+	}
+
+}
