@@ -1,0 +1,50 @@
+package com.chrome.tests;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class wiki1 {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "/Users/roshan/Downloads/chromedriver");
+		
+				//WebDriver driver= new FirefoxDriver();
+				WebDriver driver=new ChromeDriver();
+				driver.get("http://www.facebook.com");
+				String r="Log In or Sign Up";
+				String s7=driver.getTitle();
+				//System.out.println(s7);
+				if(s7.contentEquals(r))
+				{
+					System.out.println(s7);
+				}
+				WebElement d=driver.findElement(By.id("u_0_1"));
+				d.sendKeys("aneena");
+				driver.findElement(By.id("u_0_3")).sendKeys("george");
+				driver.findElement(By.id("u_0_6")).sendKeys("4088");
+			//String b=driver.findElement(By.className("mbs _3ma _6n _6s _6v")).getText();
+				//System.out.println(b);
+				driver.findElement(By.id("u_0_d")).sendKeys("jesus1234");
+				Select s=new Select(driver.findElement(By.id("month")));
+				s.selectByIndex(4);
+				Select c=new Select(driver.findElement(By.id("day")));
+				c.selectByIndex(30);
+				Select v=new Select(driver.findElement(By.id("year")));
+				v.selectByIndex(15);
+				driver.findElement(By.xpath(".//*[@id='u_0_l']")).click();
+				//driver.findElement(By.xpath(".//input[@id='u_0_g']")).click();
+				//driver.findElement(By.linkText("Create a Page")).click();
+				//driver.findElement(By.xpath(".//*[@id='reg_pages_msg']/a")).click();
+				driver.findElement(By.xpath(".//a[@href='/pages/create/?ref_type=registration_form']")).click();
+				
+				driver.navigate().back();
+				//driver.close();
+			//driver.quit();
+		// TODO Auto-generated method stub
+
+	}
+
+}

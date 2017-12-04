@@ -1,0 +1,17 @@
+package com.chrome.tests;
+
+public class cons {
+	cons(int b)
+	{
+	System.out.println("hellooooo"+b);	
+	}
+
+	public static void main(String[] args) {
+		{
+			cons a=new cons(4);
+		}
+		// TODO Auto-generated method stub
+
+	}
+
+}
