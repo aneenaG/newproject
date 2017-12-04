@@ -1,0 +1,24 @@
+package com.chrome.tests;
+
+public class overri {
+	void run()
+	{
+		System.out.println("run car");
+	}
+}
+class over1 extends overri{
+	void run()
+	{System.out.println("run bus");
+	}
+	
+	
+	public static void main(String[] args) {
+		over1 a= new over1();
+		a.run();
+		overri b=new overri();
+		b.run();
+		// TODO Auto-generated method stub
+
+	}
+
+}

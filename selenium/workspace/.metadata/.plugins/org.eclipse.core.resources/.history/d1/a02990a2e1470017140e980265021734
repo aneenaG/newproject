@@ -1,0 +1,27 @@
+package com.chrome.tests;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class wiki1 {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "/Users/roshan/Downloads/chromedriver");
+		
+				//WebDriver driver= new FirefoxDriver();
+				WebDriver driver=new ChromeDriver();
+				driver.get("http://www.facebook.com");
+				driver.findElement(By.id("u_0_1")).sendKeys("aneena");
+				driver.findElement(By.id("u_0_3")).sendKeys("george");
+				driver.findElement(By.id("u_0_6")).sendKeys("4088023456");
+				
+				driver.findElement(By.id("u_0_d")).sendKeys("jesus1234");
+				Select s=new Select(driver.findElement(By.id("month")));
+				s.selectByIndex(4);
+		// TODO Auto-generated method stub
+
+	}
+
+}
